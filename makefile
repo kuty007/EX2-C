@@ -4,6 +4,7 @@ FLAGS= -Wall -g
 all: connections
 OBJ_MAIN = main.o
 OBJ_MAT = my_mat.o
+all: connections
 connections: $(OBJ_MAIN)my_matlab.a my_mat.h
 	$(CC) $(FLAGS) -o connections $(OBJ_MAIN) my_matlab.a
 
