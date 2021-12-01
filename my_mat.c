@@ -8,7 +8,7 @@ int min(int a, int b) {
         return b;
     }
 }
-
+/* function to crate matrix with all paths*/
 void short_path_algorithm(int graph[VR][VR]) {
     for (int k = 0; k < VR; k++) {
         for (int i = 0; i < VR; i++) {
@@ -25,7 +25,7 @@ void short_path_algorithm(int graph[VR][VR]) {
         }
     }
 }
-
+/* function to crate matrix from user*/
 void Create_graph(int graph[VR][VR]) {
     int num;
     for (int i = 0; i < VR; i++) {
@@ -36,7 +36,7 @@ void Create_graph(int graph[VR][VR]) {
     }
     short_path_algorithm(graph);
 }
-
+/* function to check if there is a path*/
 int exsitPath(int graph[VR][VR], int a, int b) {
     if (graph[a][b] == 0) {
         return 0;
@@ -44,7 +44,7 @@ int exsitPath(int graph[VR][VR], int a, int b) {
         return 1;
     }
 }
-
+/* function to return the shortest path */
 int shortPath(int graph[VR][VR], int a, int b) {
     if (exsitPath == 0) {
         return 0;
