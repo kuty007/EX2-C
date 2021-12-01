@@ -46,11 +46,7 @@ int exsitPath(int graph[VR][VR], int a, int b) {
 }
 /* function to return the shortest path */
 int shortPath(int graph[VR][VR], int a, int b) {
-    if (exsitPath == 0) {
-        return 0;
-    } else {
-        return graph[a][b];
-    }
+    return graph[a][b];
 }
 
 
