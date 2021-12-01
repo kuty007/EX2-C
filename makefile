@@ -1,7 +1,6 @@
 CC=gcc
 AR=ar
 FLAGS= -Wall -g
-all: connections
 OBJ_MAIN = main.o
 OBJ_MAT = my_mat.o
 all: connections
