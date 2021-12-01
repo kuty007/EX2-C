@@ -1,16 +1,15 @@
 CC=gcc
 AR=ar
 FLAGS= -Wall -g
-
-
 all: connections
+OBJ_MAIN = main.o
+OBJ_MAT = my_mat.o
+connections: $(OBJ_MAIN)my_matlab.a my_mat.h
+	$(CC) $(FLAGS) -o connections $(OBJ_MAIN) my_matlab.a
 
-connections: main.o my_matlib.a my_mat.h
-	$(CC) $(FLAGS) -o connections main.o my_matlib.a
-
-matrixlib: my_matlib.a
-my_matlib.a: my_mat.o
-	$(AR) -rcs my_matlib.a my_mat.o
+matrix: my_matlab.a
+my_matlab.a: $(OBJ_MAT)
+	$(AR) -rcs my_matlab.a $(OBJ_MAT)
 
 my_mat.o: my_mat.c
 	$(CC) $(FLAGS) -c my_mat.c
